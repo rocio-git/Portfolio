@@ -1,12 +1,20 @@
 /* Global */
 
 :root {
-  --color-bgc: #FAF5E2;
+  /* Colors */
+  --color-beige: #FAF5E2;
   --color-black: #171717;
+  --color-gray: #3F3F3F;
   --color-white: #FFFFFF;
   --color-brown:  #362F2A;
   --color-blue: #2060CD;
   --color-yellow: #FBD47F;
+
+  /* App Colors */
+  --color-primary: var(--color-beige);
+  --color-text: var(--color-black);
+  --color-accent: var(--color-blue);
+  --color-accent-variant: var(--color-yellow);
 }
 
 * {
@@ -15,21 +23,37 @@
   padding:  0;
 }
 
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p,
+ul {
   margin: 0;
-  padding: 0; 
 }
 
-li {
-  list-style-type: none;
+ul {
+  list-style: none;
+  padding:  0;
 }
 
 a {
   text-decoration: none;
-  color:  var(--color-black);
+  color:  var(--color-text);
+}
+
+button {
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+}
+
+button:focus {
+  outline:  1px solid var(--color-accent);
 }
