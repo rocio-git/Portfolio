@@ -4,6 +4,7 @@
   position: fixed;
   top:  2rem;
   width:  100vw;
+  z-index:  10;
 }
 
 .header__inner {
@@ -82,23 +83,27 @@
   color:  var(--color-brown);
 }
 
+.mail:hover {
+  opacity: 60%;
+}
+
 
 /* Main - intro */
 #intro {
-  width: 100vw;
+  padding-top: 10rem;
+  width: 100%;
   height: 100vh;
-  z-index: -1;
+  position: relative;  
 }
 
 #intro .wrapper {
   width: fit-content;
-  height: 100%;
+  height: fit-content;
   display: grid;
   grid-template-columns: 320px 320px;
   place-items: center;
-  gap:  2rem;
+  gap:  1.2rem;
   margin: 0 auto;
-  position: relative;
 }
 
 #intro a {
@@ -106,13 +111,18 @@
   max-height: 320px;
   border-radius: 10%;
   overflow: hidden;
-  position: relative; 
 }
+
+#intro img {
+  width: 100%;
+  height: 100%;
+}
+
 
 #intro a:hover {
   transform: translateY(-1rem);
   transition: 0.4s;
-  box-shadow: 0 20px 20px var(--color-brown);
+  box-shadow: 0 10px 10px var(--color-brown);
 }
 
 #intro a:active {
@@ -120,8 +130,36 @@
   transform: translateY(0);
 }
 
+.scroll {
+  width: 40px;
+  height: 50px;
+  border: 1px solid var(--color-brown); 
+  border-radius: 30px;
+  color:  var(--color-brown);
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.arrow {
+  font-size: 18px;
+  animation:  scrolling 2s infinite;
+}
 
+@keyframes scrolling {
+  from{
+    transform: translateY(-6px);
+  }
+  to{
+    transform: translateY(6px);
+  }
+}
+
+/* Main - self-introduction */
 
 
 

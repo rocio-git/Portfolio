@@ -68,5 +68,5 @@ button:focus {
 }
 
 .wrapper {
-  padding: 10rem clamp(var(--m-padding), 100vw, var(--d-padding));
+  padding: 0 clamp(var(--m-padding), 100vw, var(--d-padding));
 }
