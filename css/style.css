@@ -79,12 +79,21 @@
 }
 
 .mail {
+  width:  fit-content;
   padding: .2rem clamp(var(--m-padding), 90vw, var(--d-padding));
   color:  var(--color-brown);
 }
 
-.mail:hover {
-  opacity: 60%;
+.mail::after{
+  content:  "";
+  display: block;
+  border-bottom: 2px dotted var(--color-brown);
+  width: 0px;
+  transition: all 0.2s ease-in;
+}
+
+.mail:hover::after {
+  width: 100%;
 }
 
 
@@ -146,8 +155,9 @@
 }
 
 .arrow {
-  font-size: 18px;
-  animation:  scrolling 2s infinite;
+  font-size: 20px;
+  animation:  scrolling 1.2s infinite;
+  opacity: 90%;
 }
 
 @keyframes scrolling {
@@ -158,6 +168,7 @@
     transform: translateY(6px);
   }
 }
+
 
 /* Main - self-introduction */
 
